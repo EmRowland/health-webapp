@@ -1,0 +1,29 @@
+<div class="col-lg-12 col-md-12">
+	<nav class="pagination py-2 d-inline-block">
+		<div class="nav-links">
+            {% if page.has_previous %}
+                <a class="page-numbers" href="?page=1">1</a>
+                {% if page.number > 3 %}
+                    <a class="page-numbers" href="#!"><i class="icofont-thin-double-left"></i></a>
+                {% endif %}
+                {% for i in page_range %}
+                    <a class="page-numbers" href="?page={{i}}">{{i}}</a>
+                
+                {% endfor %}
+            {% endif %}
+            <span aria-current="page" class="page-numbers current">{{page.number}}</span>
+            {% if page.has_next %}
+                {% for i in page.next_page_number %}
+                    <a class="page-numbers" href="?page={{i}}">{{i}}</a>
+
+                {% endfor %}
+                <p>{{page.paginator.num_pages}}</p>
+                {% if page.number < page_paginator_num_pages %}
+                    <a class="page-numbers" href="#!"><i class="icofont-thin-double-right"></i></a>
+                {% endif %}
+                    <a class="page-numbers" href="?page={{ page.paginator.num_pages }}">{{page.paginator.num_pages}}</a>
+
+                {% endif %}
+			</div>
+		</nav>
+	</div>

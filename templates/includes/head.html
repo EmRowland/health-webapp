@@ -1,0 +1,88 @@
+{% load static %}
+{% load custom_filters %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from demo.themefisher.com/novena/ by HTTrack Website Copier/3.x [XR&CO'2017], Fri, 01 Sep 2023 20:56:23 GMT -->
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Novena- Health Care &amp; Medical template</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Health Care Medical Html5 Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Themefisher Novena HTML Template v1.0">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.png' %}" />
+
+  <!-- 
+  Essential stylesheets
+  =====================================-->
+  <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/icofont/icofont.min.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/slick-carousel/slick/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/slick-carousel/slick/slick-theme.css' %}">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+</head>
+
+<body id="top">
+
+<header>
+	<div class="header-top-bar">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6">
+					<ul class="top-bar-info list-inline-item pl-0 mb-0">
+						<li class="list-inline-item"><a href="mailto:support@gmail.com"><i class="icofont-support-faq mr-2"></i>support@novena.com</a></li>
+						<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>Address Beside Nkwo-Nnobi RoundAbout Anambra </li>
+					</ul>
+				</div>
+				<div class="col-lg-6">
+					<div class="text-lg-right top-right-bar mt-2 mt-lg-0">
+						<a href="tel:+2348138065627">
+							<span>Call Now : </span>
+							<span class="h4">08138065627</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav class="navbar navbar-expand-lg navigation" id="navbar">
+		<div class="container">
+			<a class="navbar-brand" href="{% url 'home' %}">
+				<img src="{% static 'images/logojpg.png' %}" alt="" class="img-fluid">
+			</a>
+
+			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain"
+				aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="icofont-navigation-menu"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarmain">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'department' %}">Department</a></li>
+					{% comment %} <li class="nav-item"><a class="nav-link" href="{% url 'doctors' %}">Doctors</a></li> {% endcomment %}
+					<li class="nav-item"><a class="nav-link" href="{% url 'blog_view' %}">Blog</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'contact_form' %}">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
